@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const app = express();
 const postRouter = require('./routes/post');
 var bodyParser = require('body-parser')
+var cors = require('cors')
+
+//MiddleWare
+app.use(cors());
 
 //middleware post for Body parser
 // app.use(express.json());

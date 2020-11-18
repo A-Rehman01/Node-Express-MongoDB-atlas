@@ -54,7 +54,8 @@ router.delete('/:postid', (req, res) => {
 //Update  Post
 router.patch('/:postid', (req, res) => {
     const Schema = Joi.object({
-        title: Joi.required()
+        title: Joi.required(),
+        // discription: Joi.required()
     })
     const result = Schema.validate({ title: req.body.title })
     if (result.error) {
